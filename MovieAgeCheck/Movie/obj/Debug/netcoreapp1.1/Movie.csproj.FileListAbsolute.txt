@@ -1,0 +1,8 @@
+/Users/wendybreiding/Projects/exercises/MovieAgeCheck/Movie/bin/Debug/netcoreapp1.1/Movie.deps.json
+/Users/wendybreiding/Projects/exercises/MovieAgeCheck/Movie/bin/Debug/netcoreapp1.1/Movie.runtimeconfig.json
+/Users/wendybreiding/Projects/exercises/MovieAgeCheck/Movie/bin/Debug/netcoreapp1.1/Movie.runtimeconfig.dev.json
+/Users/wendybreiding/Projects/exercises/MovieAgeCheck/Movie/obj/Debug/netcoreapp1.1/Movie.AssemblyInfo.cs
+/Users/wendybreiding/Projects/exercises/MovieAgeCheck/Movie/bin/Debug/netcoreapp1.1/Movie.dll
+/Users/wendybreiding/Projects/exercises/MovieAgeCheck/Movie/bin/Debug/netcoreapp1.1/Movie.pdb
+/Users/wendybreiding/Projects/exercises/MovieAgeCheck/Movie/obj/Debug/netcoreapp1.1/Movie.dll
+/Users/wendybreiding/Projects/exercises/MovieAgeCheck/Movie/obj/Debug/netcoreapp1.1/Movie.pdb

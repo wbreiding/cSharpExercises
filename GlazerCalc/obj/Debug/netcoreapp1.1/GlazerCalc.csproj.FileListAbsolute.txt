@@ -1,0 +1,10 @@
+/Users/wendybreiding/Projects/exercises/GlazerCalc/bin/Debug/netcoreapp1.1/GlazerCalc.deps.json
+/Users/wendybreiding/Projects/exercises/GlazerCalc/bin/Debug/netcoreapp1.1/GlazerCalc.runtimeconfig.json
+/Users/wendybreiding/Projects/exercises/GlazerCalc/bin/Debug/netcoreapp1.1/GlazerCalc.runtimeconfig.dev.json
+/Users/wendybreiding/Projects/exercises/GlazerCalc/bin/Debug/netcoreapp1.1/GlazerCalc.dll
+/Users/wendybreiding/Projects/exercises/GlazerCalc/bin/Debug/netcoreapp1.1/GlazerCalc.pdb
+/Users/wendybreiding/Projects/exercises/GlazerCalc/bin/Debug/netcoreapp1.1/library.dll
+/Users/wendybreiding/Projects/exercises/GlazerCalc/bin/Debug/netcoreapp1.1/library.pdb
+/Users/wendybreiding/Projects/exercises/GlazerCalc/obj/Debug/netcoreapp1.1/GlazerCalc.AssemblyInfo.cs
+/Users/wendybreiding/Projects/exercises/GlazerCalc/obj/Debug/netcoreapp1.1/GlazerCalc.dll
+/Users/wendybreiding/Projects/exercises/GlazerCalc/obj/Debug/netcoreapp1.1/GlazerCalc.pdb

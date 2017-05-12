@@ -1,0 +1,6 @@
+/Users/wendybreiding/Projects/exercises/library/bin/Debug/netstandard1.4/library.deps.json
+/Users/wendybreiding/Projects/exercises/library/bin/Debug/netstandard1.4/library.dll
+/Users/wendybreiding/Projects/exercises/library/bin/Debug/netstandard1.4/library.pdb
+/Users/wendybreiding/Projects/exercises/library/obj/Debug/netstandard1.4/library.AssemblyInfo.cs
+/Users/wendybreiding/Projects/exercises/library/obj/Debug/netstandard1.4/library.dll
+/Users/wendybreiding/Projects/exercises/library/obj/Debug/netstandard1.4/library.pdb
