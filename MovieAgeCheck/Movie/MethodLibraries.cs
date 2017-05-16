@@ -10,11 +10,14 @@ namespace Movie {
                 return result;
             }
 
-            public static int readInt(string prompt, int low, int high) {
+            public static int readInt(string prompt, int low, int high, string error) {
                 int result;
                 do {
                     string intString = readString ( prompt );
                     result = int.Parse(intString);
+                    if ((result < low) || (result > high)) {
+                        Console.WriteLine( error );
+                    }
                 } while ( (result < low) || (result > high));
                 return result;
             }
