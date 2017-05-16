@@ -7,22 +7,35 @@ namespace Movie {
         private string movieTitle;
         private string movieAge;
 
-        public Movie (int in_movieNum, string in_movieTitle, string in_movieAge) {
-            movieNum = in_movieNum;
-            movieTitle = in_movieTitle;
-            movieAge = in_movieAge;
+        public int MovieNum {
+            get {
+                return movieNum;
+            }
+            set {
+                movieNum = value;
+            }
         }
 
-        public int getMovieNum() {
-            return movieNum;
-        }
-        
-        public string getMovieTitle() {
-            return movieTitle;
+        public string MovieTitle {
+            get {
+                return movieTitle;
+            }
+            set {
+                movieTitle = value;
+            }
         }
 
-        public string getMovieAge() {
-            return movieAge;
+        public string MovieAge {
+            get {
+                return movieAge;
+            }
+            set {
+                movieAge = value;
+            }
+        }
+
+        public override String ToString() {
+            return $"{MovieNum}. {MovieTitle} ({MovieAge})";
         }
     }
 }
