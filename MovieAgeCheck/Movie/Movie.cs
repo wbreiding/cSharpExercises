@@ -1,40 +1,52 @@
+namespace Movie
+{
 using System;
 
-namespace Movie {
-    public class Movie {
+    public class Movie
+    {
 
         private int movieNum;
         private string movieTitle;
         private string movieAge;
 
-        public int MovieNum {
-            get {
+        public int MovieNum
+        {
+            get
+            {
                 return movieNum;
             }
-            set {
+            set
+            {
                 movieNum = value;
             }
         }
 
-        public string MovieTitle {
-            get {
+        public string MovieTitle
+        {
+            get
+            {
                 return movieTitle;
             }
-            set {
+            set
+            {
                 movieTitle = value;
             }
         }
 
-        public string MovieAge {
-            get {
+        public string MovieAge
+        {
+            get
+            {
                 return movieAge;
             }
-            set {
+            set
+            {
                 movieAge = value;
             }
         }
 
-        public override String ToString() {
+        public override String ToString()
+        {
             return $"{MovieNum}. {MovieTitle} ({MovieAge})";
         }
     }
