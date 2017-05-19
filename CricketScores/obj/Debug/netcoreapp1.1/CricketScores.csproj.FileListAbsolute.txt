@@ -1,0 +1,8 @@
+/Users/wendybreiding/Projects/exercises/CricketScores/bin/Debug/netcoreapp1.1/CricketScores.deps.json
+/Users/wendybreiding/Projects/exercises/CricketScores/bin/Debug/netcoreapp1.1/CricketScores.runtimeconfig.json
+/Users/wendybreiding/Projects/exercises/CricketScores/bin/Debug/netcoreapp1.1/CricketScores.runtimeconfig.dev.json
+/Users/wendybreiding/Projects/exercises/CricketScores/bin/Debug/netcoreapp1.1/CricketScores.dll
+/Users/wendybreiding/Projects/exercises/CricketScores/bin/Debug/netcoreapp1.1/CricketScores.pdb
+/Users/wendybreiding/Projects/exercises/CricketScores/obj/Debug/netcoreapp1.1/CricketScores.AssemblyInfo.cs
+/Users/wendybreiding/Projects/exercises/CricketScores/obj/Debug/netcoreapp1.1/CricketScores.dll
+/Users/wendybreiding/Projects/exercises/CricketScores/obj/Debug/netcoreapp1.1/CricketScores.pdb
