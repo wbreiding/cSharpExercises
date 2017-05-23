@@ -1,0 +1,8 @@
+/Users/wendybreiding/Projects/exercises/CheeseBattle/bin/Debug/netcoreapp1.1/CheeseBattle.deps.json
+/Users/wendybreiding/Projects/exercises/CheeseBattle/bin/Debug/netcoreapp1.1/CheeseBattle.runtimeconfig.json
+/Users/wendybreiding/Projects/exercises/CheeseBattle/bin/Debug/netcoreapp1.1/CheeseBattle.runtimeconfig.dev.json
+/Users/wendybreiding/Projects/exercises/CheeseBattle/bin/Debug/netcoreapp1.1/CheeseBattle.dll
+/Users/wendybreiding/Projects/exercises/CheeseBattle/bin/Debug/netcoreapp1.1/CheeseBattle.pdb
+/Users/wendybreiding/Projects/exercises/CheeseBattle/obj/Debug/netcoreapp1.1/CheeseBattle.AssemblyInfo.cs
+/Users/wendybreiding/Projects/exercises/CheeseBattle/obj/Debug/netcoreapp1.1/CheeseBattle.dll
+/Users/wendybreiding/Projects/exercises/CheeseBattle/obj/Debug/netcoreapp1.1/CheeseBattle.pdb
