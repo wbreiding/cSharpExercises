@@ -42,25 +42,64 @@ namespace CricketScores
             return players;
         }
 
-        private static Player[] sortPlayersByScore(Player[] players)
+        private static void DoMerge(Player[] players, int left, int mid, int right)
         {
-            for (int i = 0; i < NUM_PLAYERS; i++)
+            Player[] temp = new Player[players.Length];
+            int i, left_end, num_elements, tmp_pos;
+
+            left_end = (mid - 1);
+            tmp_pos = left;
+            num_elements = (right - left + 1);
+
+            while ((left <= left_end) && (mid <= right))
             {
-                for (int j = i + 1; j < NUM_PLAYERS; j++)
+                if (players[left].Score <= players[mid].Score)
                 {
-                    int a = players[i].Score;
-                    string a_name = players[i].Name;
-                    int b = players[j].Score;
-                    string b_name = players[j].Name;
-                    if (a > b)
-                    {
-                        players[i].Score = b;
-                        players[i].Name = b_name;
-                        players[j].Score = a;
-                        players[j].Name = a_name;
-                    }
+                    temp[tmp_pos++] = players[left++];
+                }
+                else
+                {
+                    temp[tmp_pos++] = players[mid++];
                 }
             }
+
+            while (left <= left_end)
+            {
+                temp[tmp_pos++] = players[left++];
+            }
+
+            while (mid <= right)
+            {
+                temp[tmp_pos++] = players[mid++];
+            }
+
+            for (i = 0; i < num_elements; i++)
+            {
+                players[right] = temp[right];
+                right--;
+            }
+        }
+
+        private static void RecursiveMergeSort(Player[] players, int left, int right)
+        {
+            int mid;
+
+            if (right > left)
+            {
+                mid = (right + left) / 2;
+                RecursiveMergeSort(players, left, mid);
+                RecursiveMergeSort(players, (mid + 1), right);
+
+                DoMerge(players, left, (mid + 1), right);
+            }
+        }
+        private static Player[] sortPlayersByScore(Player[] players)
+        {
+            int left = 0;
+            int right = players.Length - 1;
+
+            RecursiveMergeSort(players, left, right);
+
             return players;
         }
         static void Main(string[] args)
@@ -74,7 +113,7 @@ namespace CricketScores
             string sort;
             do
             {
-                sort = MethodLibraries.readString("Do you want to sort by name or by scores? (enter N or S): ");
+                sort = MethodLibraries.readString("Do you want to sort by name or by scores? (enter N or S): ").ToUpper();
             } while (!(sort.Equals("N") || sort.Equals("S")));
 
             if (sort.Equals("N"))
