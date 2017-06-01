@@ -1,0 +1,8 @@
+/Users/wendybreiding/Projects/exercises/CrazyTimers/bin/Debug/netcoreapp1.1/CrazyTimers.deps.json
+/Users/wendybreiding/Projects/exercises/CrazyTimers/bin/Debug/netcoreapp1.1/CrazyTimers.runtimeconfig.json
+/Users/wendybreiding/Projects/exercises/CrazyTimers/bin/Debug/netcoreapp1.1/CrazyTimers.runtimeconfig.dev.json
+/Users/wendybreiding/Projects/exercises/CrazyTimers/bin/Debug/netcoreapp1.1/CrazyTimers.dll
+/Users/wendybreiding/Projects/exercises/CrazyTimers/bin/Debug/netcoreapp1.1/CrazyTimers.pdb
+/Users/wendybreiding/Projects/exercises/CrazyTimers/obj/Debug/netcoreapp1.1/CrazyTimers.AssemblyInfo.cs
+/Users/wendybreiding/Projects/exercises/CrazyTimers/obj/Debug/netcoreapp1.1/CrazyTimers.dll
+/Users/wendybreiding/Projects/exercises/CrazyTimers/obj/Debug/netcoreapp1.1/CrazyTimers.pdb
