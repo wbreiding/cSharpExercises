@@ -1,0 +1,8 @@
+/Users/wendybreiding/Projects/exercises/Bank Starter/MyBank/bin/Debug/netcoreapp1.1/MyBank.deps.json
+/Users/wendybreiding/Projects/exercises/Bank Starter/MyBank/bin/Debug/netcoreapp1.1/MyBank.runtimeconfig.json
+/Users/wendybreiding/Projects/exercises/Bank Starter/MyBank/bin/Debug/netcoreapp1.1/MyBank.runtimeconfig.dev.json
+/Users/wendybreiding/Projects/exercises/Bank Starter/MyBank/obj/Debug/netcoreapp1.1/MyBank.AssemblyInfo.cs
+/Users/wendybreiding/Projects/exercises/Bank Starter/MyBank/bin/Debug/netcoreapp1.1/MyBank.dll
+/Users/wendybreiding/Projects/exercises/Bank Starter/MyBank/bin/Debug/netcoreapp1.1/MyBank.pdb
+/Users/wendybreiding/Projects/exercises/Bank Starter/MyBank/obj/Debug/netcoreapp1.1/MyBank.dll
+/Users/wendybreiding/Projects/exercises/Bank Starter/MyBank/obj/Debug/netcoreapp1.1/MyBank.pdb
