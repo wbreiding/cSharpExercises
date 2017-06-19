@@ -17,12 +17,25 @@ namespace Bank
         private string address;
         private decimal balance;
         private int accountNumber;
+        private int overDraft;
 
         public int AccountNumber
         {
             get
             {
                 return accountNumber;
+            }
+        }
+
+        public int OverDraft
+        {
+            get
+            {
+                return overDraft;
+            }
+            set 
+            {
+                overDraft = value;
             }
         }
 
@@ -34,6 +47,7 @@ namespace Bank
                 textOut.WriteLine(name);
                 textOut.WriteLine(address);
                 textOut.WriteLine(balance);
+                textOut.WriteLine(overDraft);
             }
             catch
             {
@@ -67,7 +81,8 @@ namespace Bank
             string addressText = textIn.ReadLine();
             string balanceText = textIn.ReadLine();
             decimal balanceValue = decimal.Parse(balanceText);
-            return new Account(nameText, addressText, balanceValue, accountNumber);
+            int overDraft = int.Parse(textIn.ReadLine());
+            return new Account(nameText, addressText, balanceValue, accountNumber, overDraft);
         }
 
         public static Account Load(string filename)
@@ -90,17 +105,18 @@ namespace Bank
             return result;
         }
 
-        public Account(string inName, string inAddress, decimal inBalance, int inAccountNumber)
+        public Account(string inName, string inAddress, decimal inBalance, int inAccountNumber, int overDraft=0)
         {
             name = inName;
             address = inAddress;
             balance = inBalance;
             accountNumber = inAccountNumber;
+            this.overDraft = overDraft;
         }
 
         public override string ToString() 
         {
-            string output = $"Name: {this.name}\n Address: {this.address}\n Balance: {this.balance}\n Account Number: {this.accountNumber}";
+            string output = $"Name: {this.name}\n Address: {this.address}\n Balance: {this.balance}\n Account Number: {this.accountNumber}\n OverDraft: {this.overDraft}";
             return output;
         }
 
@@ -112,9 +128,16 @@ namespace Bank
                 {
                     if (balance == p.balance)
                     {
-                        if (accountNumber == p.accountNumber)
+                       if (accountNumber == p.accountNumber)
                         {
-                            return true;
+                            if (overDraft == p.overDraft)
+                            {
+                                return true;
+                            } else
+                            {
+                                return false;
+                            }
+                            
                         } else 
                         {
                             return false;
@@ -238,7 +261,7 @@ namespace Bank
             TextReader textIn = null;
             try
             {
-                textIn = new StreamReader(File.OpenWrite(filename));
+                textIn = new StreamReader(File.Open(filename, FileMode.OpenOrCreate, FileAccess.ReadWrite));
                 result = Load(textIn);
             }
             catch (Exception e)
@@ -267,27 +290,17 @@ namespace Bank
                 {
                     foreach (Account a in bankAccounts) 
                     {
-                        if (a.accountNumber == p.bankAccounts.FindAccount(a.accountNumber).accountNumber) {
-                            if (a.name == p.bankAccounts.FindAccount(a.accountNumber).name) {
-                                if (a.address == p.bankAccounts.FindAccount(a.accountNumber).address) 
-                                {
-                                    if (a.balance = p.bankAccounts.FindAccount(a.accountNumber).balance)
-                                    {
-                                        return true;
-                                    }
-                                } else 
-                                {
-                                    return false;
-                                }
-                            } else 
+                        //TODO: check for matching account number first
+                        if (a.Equals(p.FindAccount(a.AccountNumber))) 
+                            {
+                                continue;
+                            }
+                            else
                             {
                                 return false;
                             }
-                        } else 
-                        {
-                            return false;
-                        }
                     }
+                    return true;
                 } else
                 {
                     return false;
@@ -308,24 +321,38 @@ namespace Bank
 
             // TODO: Need to add some code that will create a large number of "fake" accounts
 
-            Account rob = friendlyBank.AddAccount("Rob", "Hull", 100);
-            Console.WriteLine("Account created with account number: " + rob.AccountNumber);
-            friendlyBank.Save("test.txt");
+            Bank testBank = new Bank("Test Bank");
+            string[] firstNames = new string[] { "Rob", "Fred", "Jim", "Ethel", "Nigel", "Simon", "Gloria", "Evadne","Maxwell" };
+            string[] surnames = new string[] { "Bloggs", "Smith", "Jones", "Thompson", "Wooster", "Brown", "Acaster", "Berry", "Ackerman" };
+            Random r = new Random(1);
 
-             Account a = friendlyBank.AddAccount("Rob", "Hull", 100);
-             Account b = friendlyBank.AddAccount("Rob", "Hull", 100);
-            if (a.Equals(b))
-            {
-                Console.WriteLine("Test passed");
+            string[] names = new string[80];
+            Account[] accounts = new Account[80];
+            int j = 0;
+
+            foreach (string surname in surnames)
+               {
+               foreach (string firstName in firstNames)
+                {
+                    if (j<80) names[j] = $"{firstName} {surname}";
+                    j++;
+                }
             }
-            else
-            {
-                Console.WriteLine("Test failed");
+            j=0;
+            for (int i=0; i<80; i++) {
+                if (names[i] == "") j=0;
+                accounts[i] = testBank.AddAccount(names[j], "Some Address", r.Next(-100,10000));
+                //Console.WriteLine($"{accounts[i]}");
+                j++;
             }
+
+            testBank.Save("test.txt");
 
             // TODO: Need to compare the loaded bank with the original to make sure they are the same
 
-            //Bank loadedBank = Bank.Load("test.txt");
+            Bank loadedBank = Bank.Load("test.txt");
+
+            if (loadedBank.Equals(testBank)) Console.WriteLine("Banks match!");
         }
     }
 }
